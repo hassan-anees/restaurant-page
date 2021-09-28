@@ -1,0 +1,23 @@
+.navbar {
+    position: absolute;
+    width: 100%;
+    height: 91px;
+    left: 0px;
+    top: 0px;
+    background: #e9ca7c;
+    /* display: flex; */
+}
+
+.navlist {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.content {
+    /* font-family: Poppin; */
+    margin-top: 91px;
+}
