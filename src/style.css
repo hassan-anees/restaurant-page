@@ -1,23 +1,198 @@
-.navbar {
-    position: absolute;
-    width: 100%;
-    height: 91px;
-    left: 0px;
-    top: 0px;
-    background: #e9ca7c;
-    /* display: flex; */
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins/Poppins-Regular.ttf") format("ttf");
+    /* font-weight: 600; */
+    font-style: normal;
 }
 
-.navlist {
+html {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* css for nav */
+.home-nav {
+    font-size: 3rem;
+}
+.navContainer {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
-    text-align: center;
-    text-decoration: none;
-    list-style: none;
+    position: sticky;
+    background-color: #e9ca7c;
+    /* min-height: 7vh; */
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
+}
+.div-nav-list {
+    display: flex;
+    justify-content: center;
 }
 
-.content {
-    /* font-family: Poppin; */
-    margin-top: 91px;
+.nav-list {
+    display: flex;
+    align-items: end;
+    color: black;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+}
+
+.nav-list > li {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 8px;
+}
+
+li {
+    cursor: pointer;
+}
+
+/* Adding CSS for Main */
+/* .image-container {
+    background-image: url("./kabob.jpg");
+    background-blend-mode: multiply;
+} */
+
+.hero-home {
+    background-color: rgba(51, 51, 51, 0.407);
+    color: white;
+    text-align: center;
+    /* background-color: rgb(196, 11, 11); */
+    background-image: url("./kabob.jpg");
+    background-blend-mode: multiply;
+    padding: 10vh 0;
+    background-size: cover;
+}
+
+.home-description {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.item-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.attention-item {
+    border-radius: 25px;
+    /* border: 2px solid #73ad21; */
+    background-color: rgb(230, 147, 117);
+    box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    max-width: 350px;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.attention-item p {
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+.attention-item h3 {
+    font-size: 1.5rem;
+}
+
+@media all and (max-width: 767px) {
+    .item-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* About Css */
+
+.contact-headline,
+.motive-headline {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 200;
+}
+
+.motive-div-p {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 855px;
+}
+
+.motive-div-p p {
+    font-size: 1.125rem;
+}
+/* .motive-p {
+    font-size: 1.125rem;
+} */
+
+.about-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.pdiv {
+    display: inline-block;
+    text-align: left;
+}
+.pdiv p {
+    font-size: 1.125rem;
+}
+
+/* Menu CSS */
+
+.menu-headline {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 200;
+}
+
+.menu-item-div {
+    display: flex;
+    padding: 10px;
+}
+
+.nd-div {
+    max-width: 400px;
+    padding: 10px;
+}
+
+.nd-div p {
+    padding: 10px;
+}
+
+.menu-item-div img {
+    width: 80px;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

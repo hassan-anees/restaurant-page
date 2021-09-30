@@ -9,18 +9,51 @@ console.log("Loading up page");
 // Tab logic goes within here actually
 // wipes the current div and replaces it with the module div
 
-window.onload = () => {
-    //write your code here
-    // getting content div
-    const content = document.querySelector(".content");
-    // const h2El = document.createElement("h2");
-    // h2El.innerHTML = "Hello testing";
-    // console.log("here");
-    // have three links here
+const homeRender = (e) => {
+    e.preventDefault();
+    console.log("You clicked on HOME");
+};
 
-    // content.appendChild(h2El);
+const aboutRender = (e) => {
+    e.preventDefault();
+    console.log("You clicked on ABOUT");
+};
+
+const menuRender = (e) => {
+    e.preventDefault();
+    console.log("You clicked on MENUUU");
+};
+
+const clearContent = () => {};
+
+window.onload = () => {
+    const content = document.querySelector(".content");
+
+    // have three links here
+    // here we add event listener to the list grouping
+
     content.appendChild(Navbar());
-    content.appendChild(Home());
-    content.appendChild(Menu());
-    content.appendChild(About());
+
+    const containerEl = document.createElement("div");
+    containerEl.className = "container";
+    content.appendChild(containerEl);
+
+    containerEl.appendChild(Home());
+    const homeEl = document.querySelector(".home-nav");
+    const menuEl = document.querySelector(".menu-nav");
+    const aboutEl = document.querySelector(".about-nav");
+
+    homeEl.addEventListener("click", function () {
+        containerEl.innerHTML = "";
+        containerEl.appendChild(Home());
+    });
+    aboutEl.addEventListener("click", function () {
+        containerEl.innerHTML = "";
+        containerEl.appendChild(About());
+    });
+
+    menuEl.addEventListener("click", function () {
+        containerEl.innerHTML = "";
+        containerEl.appendChild(Menu());
+    });
 };
