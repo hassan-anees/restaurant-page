@@ -4,6 +4,7 @@ import Home from "./home.js";
 import Menu from "./menu.js";
 import About from "./about.js";
 import Navbar from "./navbar.js";
+import Footer from "./footer.js";
 console.log("Loading up page");
 
 // Tab logic goes within here actually
@@ -56,4 +57,6 @@ window.onload = () => {
         containerEl.innerHTML = "";
         containerEl.appendChild(Menu());
     });
+
+    content.appendChild(Footer());
 };

@@ -8,11 +8,27 @@
 html {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 body {
     margin: 0;
     padding: 0;
 }
+footer {
+    position: fixed;
+    color: white;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+}
+
+footer p {
+    padding: 10px;
+    text-align: center;
+}
+
 h1,
 h2,
 h3,
